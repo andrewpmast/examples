@@ -11,12 +11,13 @@ random_number = random.randrange(0,20)
 print('I\'m thinking of a number between 0 and 20, go ahead and guess it!')
 print('Debug: ', random_number)
 guess_count = 1
-guess = None
-while random_number != guess:
-    guess = input()
-    print('Sorry, not the number I was thinking of, try again.... Guess count is', guess_count)
-    guess_count += 1
-    continue
 
-print('Hey, you got it, you said', random_number, 'and that\'s what I was thinking of!')
+print('OK, guess a number')
+while random_number != int(guess):
+    guess = input()
+    guess_count += 1
+    print(guess,'is not the number I\'m thinking of, try again')
+
+print('Yep', random_number, 'was it and it took you', guess_count, 'tries!')
+
 sys.exit()
